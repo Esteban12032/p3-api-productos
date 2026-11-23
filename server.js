@@ -106,6 +106,15 @@ app.delete("/api/productos/:id", requiereToken, (req, res) => {
     res.status(204).send();
 });
 
+
+
+
+app.get("/", (req, res) => {
+    res.json({
+        mensaje: "API funcionando correctamente",
+        productos: "/api/productos"
+    });
+});
 app.listen(PORT, "0.0.0.0", () => {
     console.log(`Servidor funcionando en puerto ${PORT}`);
 });
